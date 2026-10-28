@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Puskesmas Tambak Aji – Pelayanan Kesehatan Terpadu</title>
+<meta name="description" content="Informasi pelayanan kesehatan, layanan ILP, jadwal posyandu, dan informasi publik Puskesmas Tambak Aji, Kota Semarang.">
+<style>
+:root{--bg:#f6f9fc;--card:#fff;--tx:#14263a;--mute:#5a6b7d;--bl:#0b5cad;--bl2:#e6f0fb;--gr:#1f9d6b;--gr2:#e3f6ee;--bd:#d9e3ee;--warn:#fff6dd;--warntx:#6b4e00;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1824;--card:#16253a;--tx:#e8eef5;--mute:#9db0c4;--bl:#6db0ff;--bl2:#1a3552;--gr:#4cc796;--gr2:#143b30;--bd:#2a3d55;--warn:#3a3012;--warntx:#f1d98a}}
+:root[data-theme="dark"]{--bg:#0e1824;--card:#16253a;--tx:#e8eef5;--mute:#9db0c4;--bl:#6db0ff;--bl2:#1a3552;--gr:#4cc796;--gr2:#143b30;--bd:#2a3d55;--warn:#3a3012;--warntx:#f1d98a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--bl)}h1,h2,h3{line-height:1.25;margin:0 0 .5em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);font-weight:700}
+.logo{width:40px;height:40px;border-radius:10px;background:var(--bl);color:#fff;display:grid;place-items:center;font-size:22px}
+.brand small{display:block;font-weight:400;color:var(--mute);font-size:12px}
+nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--tx);font-size:15px}
+nav a:hover,nav a.on{background:var(--bl2);color:var(--bl)}
+#mb{display:none;background:var(--bl2);color:var(--bl);border:0;border-radius:8px;padding:8px 12px;font-size:15px;cursor:pointer}
+@media(max-width:820px){#mb{display:block}nav{display:none;width:100%}nav.open{display:block}.top{flex-wrap:wrap}nav ul{flex-direction:column}}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;border:2px solid var(--bl);background:var(--bl);color:#fff;text-decoration:none;font-weight:600;cursor:pointer;font-size:15px}
+.btn.o{background:transparent;color:var(--bl)}.btn.g{background:var(--gr);border-color:var(--gr);color:#fff}
+:focus-visible{outline:3px solid var(--gr);outline-offset:2px}
+.hero{background:linear-gradient(135deg,var(--bl2),var(--gr2));padding:56px 0}
+.hero h1{font-size:clamp(28px,5vw,44px)}.hero p{max-width:620px;color:var(--mute);font-size:18px}
+.tag{display:inline-block;background:var(--gr2);color:var(--gr);padding:4px 12px;border-radius:99px;font-weight:600;font-size:14px;margin-bottom:12px}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+section.s{padding:36px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px}
+.ic{font-size:28px;display:block;margin-bottom:6px}
+.note{background:var(--warn);color:var(--warntx);border-radius:10px;padding:10px 14px;font-size:14px;margin:12px 0}
+.bc{font-size:14px;color:var(--mute);padding:16px 0 0}.bc a{text-decoration:none}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit}
+label{font-weight:600;font-size:14px;display:block;margin:10px 0 4px}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal b{font-size:13px;color:var(--mute)}.cal button{aspect-ratio:1;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);cursor:pointer}
+.cal button.has{background:var(--gr);color:#fff;border-color:var(--gr);font-weight:700}
+.flow{counter-reset:s;display:grid;gap:10px}.flow div{background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--gr);border-radius:10px;padding:12px 14px 12px 50px;position:relative}
+.flow div:before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--gr);color:#fff;display:grid;place-items:center;font-weight:700}
+details{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin-bottom:8px}summary{cursor:pointer;font-weight:600}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.tabs button{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:99px;padding:6px 14px;cursor:pointer}.tabs button.on{background:var(--bl);color:#fff;border-color:var(--bl)}
+.meta{font-size:13px;color:var(--mute)}
+footer{background:#0b3d73;color:#e8f1fb;padding:28px 0;margin-top:30px}footer a{color:#cfe4ff}
+#up{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;border:0;background:var(--bl);color:#fff;font-size:20px;cursor:pointer;display:none}
+</style>
+</head>
+<body>
+<header><div class="wrap top">
+<a class="brand" href="#beranda"><span class="logo" aria-hidden="true">✚</span><span>Puskesmas Tambak Aji<small>Kota Semarang, Jawa Tengah</small></span></a>
+<button id="mb" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+<nav id="nav" aria-label="Navigasi utama"><ul>
+<li><a href="#beranda" data-r="beranda">Beranda</a></li><li><a href="#profil" data-r="profil">Profil Puskesmas</a></li><li><a href="#ilp" data-r="ilp">Layanan ILP</a></li><li><a href="#posyandu" data-r="posyandu">Jadwal Posyandu</a></li><li><a href="#informasi" data-r="informasi">Informasi Publik</a></li><li><a href="#kontak" data-r="kontak">Kontak</a></li>
+</ul></nav></div></header>
+<main id="app" tabindex="-1"></main>
+<footer><div class="wrap grid">
+<div><b>Puskesmas Tambak Aji</b><br>[Masukkan alamat resmi puskesmas]<br>[Masukkan nomor kontak resmi]</div>
+<div><b>Jam pelayanan</b><br>[Masukkan jam pelayanan resmi]</div>
+<div><b>Tautan</b><br><a href="#profil">Profil</a> · <a href="#ilp">Layanan ILP</a> · <a href="#posyandu">Jadwal Posyandu</a> · <a href="#informasi">Informasi Publik</a> · <a href="#kontak">Kontak</a></div>
+</div><div class="wrap meta" style="color:#b9d0ea;margin-top:14px">Situs ini masih dalam tahap pengembangan dan belum dinyatakan sebagai situs resmi pemerintah.</div></footer>
+<button id="up" aria-label="Kembali ke atas">↑</button>
+<script>
+const $=s=>document.querySelector(s);
+// DATA: diisi petugas puskesmas. Kosong = tidak ada data rekaan.
+const POSYANDU=[]; // {nama,kelurahan,lokasi,tanggal:'YYYY-MM-DD',jam,jenis,sasaran,ket}
+const ARTIKEL=[
+{j:'Mengenal dan Mencegah Tuberkulosis (TBC)',k:'Artikel',t:'Contoh materi',i:'🫁',b:'TBC adalah penyakit menular yang menyerang paru-paru. Gejala yang perlu diwaspadai: batuk lebih dari 2 minggu, demam, keringat malam, dan berat badan turun. Tutup mulut saat batuk, jaga ventilasi rumah, dan segera periksa ke puskesmas bila bergejala. Pengobatan yang teratur sampai tuntas dapat menyembuhkan TBC.',s:'Kementerian Kesehatan RI'},
+{j:'Cegah Demam Berdarah dengan 3M Plus',k:'Artikel',t:'Contoh materi',i:'🦟',b:'Lakukan 3M: Menguras tempat penampungan air, Menutup rapat tempat air, dan Mendaur ulang barang bekas. Tambahkan pencegahan seperti memakai lotion antinyamuk dan memasang kasa jendela. Lakukan Pemberantasan Sarang Nyamuk secara rutin setiap minggu.',s:'Kementerian Kesehatan RI'},
+{j:'Perilaku Hidup Bersih dan Sehat (PHBS)',k:'Artikel',t:'Contoh materi',i:'🧼',b:'Biasakan mencuci tangan dengan sabun dan air mengalir, memakai air bersih, mengonsumsi buah dan sayur, tidak merokok di dalam rumah, serta rutin beraktivitas fisik. Kebiasaan sederhana ini melindungi seluruh anggota keluarga.',s:'Kementerian Kesehatan RI'}];
+const KLASTER=[
+['👶','Klaster Ibu, Anak, dan Remaja',['Pelayanan kesehatan ibu hamil','Ibu bersalin dan nifas (sesuai layanan tersedia)','Kesehatan bayi dan balita','Pemantauan tumbuh kembang anak','Kesehatan anak usia sekolah dan remaja','Edukasi kesehatan reproduksi sesuai sasaran']],
+['🧑‍🦳','Klaster Usia Dewasa dan Lansia',['Pemeriksaan kesehatan (sesuai ketersediaan)','Pemantauan tekanan darah','Skrining faktor risiko penyakit tidak menular','Edukasi pola hidup sehat','Pelayanan kesehatan lansia']],
+['🛡️','Klaster Penanggulangan Penyakit Menular',['Edukasi pencegahan penyakit menular','Informasi pemeriksaan (sesuai layanan tersedia)','Pencegahan tuberkulosis, demam berdarah, dll.','Informasi tindak lanjut sesuai prosedur puskesmas']],
+['🤝','Pelayanan Lintas Klaster',['Promosi kesehatan','Kesehatan lingkungan','Surveilans kesehatan masyarakat','Edukasi gizi','Pemberdayaan masyarakat dan kader']]];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const bc=n=>`<div class="wrap bc"><a href="#beranda">Beranda</a> › ${n}</div>`;
+const PH='<div class="note">Data resmi belum tersedia. Teks dalam tanda kurung siku akan diisi petugas puskesmas setelah diverifikasi.</div>';
+const pages={
+beranda:()=>`<section class="hero"><div class="wrap"><span class="tag">Pelayanan Kesehatan Terpadu, Mudah Diakses, dan Dekat dengan Masyarakat</span>
+<h1>Selamat Datang di Puskesmas Tambak Aji</h1>
+<p>Temukan informasi pelayanan kesehatan, jadwal kegiatan posyandu, program kesehatan masyarakat, dan berbagai informasi kesehatan untuk mendukung keluarga yang sehat dan sejahtera.</p>
+<div class="row"><a class="btn" href="#ilp">Lihat Layanan Kesehatan</a><a class="btn g" href="#posyandu">Cek Jadwal Posyandu</a><a class="btn o" href="#kontak">Hubungi Puskesmas</a></div></div></section>
+<section class="s"><div class="wrap"><h2>Layanan Unggulan</h2><div class="grid">${[['🤱','Kesehatan Ibu dan Anak','Pemeriksaan ibu hamil, bayi, dan balita.','ilp'],['🩺','Pelayanan Kesehatan Umum','Informasi pemeriksaan dan pengobatan.','ilp'],['🔄','Integrasi Layanan Primer (ILP)','Layanan berdasarkan siklus hidup.','ilp'],['🏘️','Posyandu','Jadwal dan kegiatan posyandu.','posyandu'],['📣','Edukasi dan Promosi Kesehatan','Penyuluhan untuk keluarga sehat.','informasi'],['ℹ️','Informasi Kesehatan Masyarakat','Artikel dan pengumuman resmi.','informasi']].map(c=>`<div class="card"><span class="ic">${c[0]}</span><h3>${c[1]}</h3><p>${c[2]}</p><a class="btn o" href="#${c[3]}">Lihat detail</a></div>`).join('')}</div></div></section>
+<section class="s"><div class="wrap"><h2>Informasi Terbaru</h2><div class="grid">${['Jadwal kegiatan posyandu','Kegiatan penyuluhan kesehatan','Program imunisasi','Kegiatan kesehatan masyarakat','Pengumuman pelayanan puskesmas'].map(t=>`<div class="card"><h3>${t}</h3><p class="meta">Akan diperbarui oleh petugas puskesmas.</p></div>`).join('')}</div></div></section>`,
+profil:()=>bc('Profil Puskesmas')+`<section class="s"><div class="wrap"><h1>Profil Puskesmas</h1>${PH}
+<div class="card"><h2>Tentang Puskesmas</h2><p>Puskesmas Tambak Aji adalah fasilitas pelayanan kesehatan tingkat pertama yang memberikan pelayanan kesehatan kepada masyarakat di wilayah kerjanya.</p></div><br>
+<div class="grid"><div class="card"><h3>Visi dan Misi</h3><p>[Masukkan visi dan misi resmi]</p></div><div class="card"><h3>Wilayah Kerja</h3><p>[Masukkan wilayah kerja dan kelurahan yang dilayani]</p></div><div class="card"><h3>Jenis Pelayanan</h3><p>[Masukkan daftar pelayanan yang tersedia]</p></div><div class="card"><h3>Sumber Daya dan Fasilitas</h3><p>[Masukkan data tenaga kesehatan dan sarana yang boleh dipublikasikan]</p></div></div>
+<h2 style="margin-top:28px">Dokumentasi Kegiatan</h2><p class="meta">Klik gambar untuk memperbesar. Foto kegiatan akan diunggah petugas.</p><div class="grid" id="gal">${['Pelayanan kesehatan masyarakat','Kegiatan posyandu','Penyuluhan kesehatan','Kegiatan imunisasi','Kesehatan lingkungan','Pemberdayaan kader'].map(t=>`<button class="card" data-g="${t}" style="cursor:pointer;text-align:center;color:var(--tx)"><span class="ic">🖼️</span>${t}<br><span class="meta">[Foto belum diunggah]</span></button>`).join('')}</div></div></section>`,
+ilp:()=>bc('Layanan ILP')+`<section class="s"><div class="wrap"><h1>Integrasi Layanan Primer (ILP)</h1><p>Layanan kesehatan disusun berdasarkan siklus hidup, agar Anda mudah menemukan layanan yang sesuai kebutuhan.</p><div class="note">Pastikan jenis layanan sesuai yang benar-benar tersedia di Puskesmas Tambak Aji sebelum dipublikasikan.</div>
+<div class="grid">${KLASTER.map(k=>`<div class="card"><span class="ic">${k[0]}</span><h3>${k[1]}</h3><ul>${k[2].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div>
+<h2 style="margin-top:28px">Alur Pelayanan ILP</h2><div class="flow"><div>Masyarakat memperoleh informasi pelayanan.</div><div>Masyarakat datang ke lokasi pelayanan yang sesuai.</div><div>Petugas melakukan pendaftaran atau pencatatan.</div><div>Petugas melakukan skrining dan pemeriksaan sesuai kebutuhan.</div><div>Masyarakat memperoleh pelayanan atau tindak lanjut sesuai hasil pemeriksaan.</div></div><p class="meta">Alur ini bersifat umum dan perlu disesuaikan dengan prosedur resmi puskesmas.</p>
+<h2 style="margin-top:28px">Pertanyaan yang Sering Diajukan</h2>
+<details><summary>Apa itu Integrasi Layanan Primer?</summary><p>ILP adalah pendekatan pelayanan kesehatan primer yang mengatur layanan berdasarkan kelompok siklus hidup, sehingga pelayanan lebih terpadu dan dekat dengan masyarakat.</p></details>
+<details><summary>Siapa saja yang dapat memanfaatkan layanan ILP?</summary><p>Seluruh kelompok usia, mulai dari ibu hamil, bayi, anak, remaja, dewasa, hingga lansia. [Sesuaikan dengan kebijakan puskesmas]</p></details>
+<details><summary>Apa saja yang perlu dibawa saat berkunjung?</summary><p>[Masukkan persyaratan resmi, misalnya kartu identitas dan kartu jaminan kesehatan bila diperlukan]</p></details>
+<details><summary>Bagaimana cara mengetahui jadwal pelayanan?</summary><p>Lihat halaman Jadwal Posyandu dan Pengumuman, atau hubungi puskesmas melalui halaman Kontak.</p></details>
+<details><summary>Apakah pelayanan ILP tersedia di posyandu?</summary><p>[Masukkan keterangan resmi sesuai layanan yang tersedia di posyandu wilayah kerja]</p></details>
+<div class="row"><a class="btn g" href="#posyandu">Lihat Jadwal Posyandu</a></div></div></section>`,
+posyandu:()=>bc('Jadwal Posyandu')+`<section class="s"><div class="wrap"><h1>Jadwal Posyandu</h1>
+<div class="card"><div class="filters"><div><label for="fq">Cari nama posyandu</label><input id="fq" type="search"></div><div><label for="fk">Kelurahan</label><select id="fk"></select></div><div><label for="fb">Bulan</label><select id="fb"><option value="">Semua bulan</option>${['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'].map((m,i)=>`<option value="${i}">${m}</option>`).join('')}</select></div><div><label for="ft">Tanggal</label><input id="ft" type="date"></div><div><label for="fj">Jenis kegiatan</label><select id="fj"></select></div></div></div>
+<div class="grid" style="margin-top:16px;align-items:start"><div class="card"><div class="row" style="justify-content:space-between;align-items:center;margin:0 0 8px"><button class="btn o" id="pm" aria-label="Bulan sebelumnya">‹</button><b id="cm"></b><button class="btn o" id="nm" aria-label="Bulan berikutnya">›</button></div><div class="cal" id="cal"></div></div><div id="list"></div></div>
+<h2 style="margin-top:24px">Kegiatan yang Dapat Tersedia</h2><p>Penimbangan berat badan balita, pengukuran panjang/tinggi badan, pemantauan pertumbuhan, edukasi gizi, pelayanan ibu dan anak, imunisasi sesuai jadwal dan ketersediaan, serta skrining kesehatan sesuai sasaran.</p></div></section>`,
+informasi:()=>bc('Informasi Publik')+`<section class="s"><div class="wrap"><h1>Informasi Publik</h1>
+<label for="iq">Cari berita, artikel, pengumuman, atau dokumen</label><input id="iq" type="search" placeholder="Ketik kata kunci…">
+<div class="tabs" id="tabs">${['Semua','Pengumuman','Berita dan Kegiatan','Artikel','Standar Pelayanan','Dokumen'].map((t,i)=>`<button data-t="${t}" class="${i?'':'on'}">${t}</button>`).join('')}</div><div id="ires"></div></div></section>`,
+kontak:()=>bc('Kontak')+`<section class="s"><div class="wrap"><h1>Kontak Puskesmas</h1>${PH}<div class="grid" style="align-items:start">
+<div class="card"><h3>Puskesmas Tambak Aji</h3><p>📍 [Masukkan alamat resmi puskesmas]<br>📞 [Masukkan nomor kontak resmi]<br>✉️ [Masukkan email resmi, jika tersedia]<br>🕘 [Masukkan jam pelayanan resmi]<br>📱 [Masukkan akun media sosial resmi, jika tersedia]</p>
+<p class="meta">Tombol WhatsApp akan aktif setelah nomor resmi tersedia. WhatsApp hanya untuk pertanyaan umum, bukan keadaan darurat.</p><button class="btn g" disabled style="opacity:.6">Hubungi melalui WhatsApp</button>
+<div class="note" style="margin-top:14px">Peta lokasi akan ditampilkan setelah alamat atau koordinat resmi diverifikasi.</div></div>
+<form class="card" id="cf" novalidate><h3>Kirim Pesan</h3><div class="note">Formulir masih dalam tahap pengembangan. Pesan belum dapat dikirim atau diproses. Mohon tidak menulis data medis atau identitas pasien.</div>
+<label for="cn">Nama</label><input id="cn" required><label for="ce">Email atau nomor kontak (opsional)</label><input id="ce"><label for="cc">Kategori pertanyaan</label><select id="cc"><option>Informasi layanan</option><option>Jadwal posyandu</option><option>Saran dan masukan</option><option>Lainnya</option></select><label for="cs">Subjek</label><input id="cs" required><label for="cm">Isi pesan</label><textarea id="cm" rows="4" required></textarea><p id="cerr" role="alert" style="color:#c0392b"></p><button class="btn" type="submit">Kirim</button></form></div></div></section>`,
+};
+const nf=()=>bc('Halaman tidak ditemukan')+`<section class="s"><div class="wrap" style="text-align:center"><div style="font-size:64px">🔍</div><h1>404 – Halaman tidak ditemukan</h1><p>Halaman yang Anda cari tidak tersedia. Silakan kembali ke beranda.</p><a class="btn" href="#beranda">Kembali ke Beranda</a></div></section>`;
+function fillOpts(id,key,all){const s=$(id),v=[...new Set(POSYANDU.map(p=>p[key]))].sort();s.innerHTML=`<option value="">${all}</option>`+v.map(x=>`<option>${esc(x)}</option>`).join('')}
+let cy=new Date().getFullYear(),cmn=new Date().getMonth();
+function initPos(){
+fillOpts('#fk','kelurahan','Semua kelurahan');fillOpts('#fj','jenis','Semua kegiatan');
+const draw=()=>{const q=$('#fq').value.toLowerCase(),k=$('#fk').value,b=$('#fb').value,t=$('#ft').value,j=$('#fj').value;
+const r=POSYANDU.filter(p=>(!q||p.nama.toLowerCase().includes(q))&&(!k||p.kelurahan===k)&&(!b||new Date(p.tanggal).getMonth()==b)&&(!t||p.tanggal===t)&&(!j||p.jenis===j));
+$('#list').innerHTML=r.length?r.map(p=>`<div class="card" style="margin-bottom:10px"><h3>${esc(p.nama)}</h3><p>${esc(p.kelurahan)} · ${esc(p.lokasi)}<br>${esc(p.tanggal)}, ${esc(p.jam)}<br>${esc(p.jenis)} · Sasaran: ${esc(p.sasaran)}</p><p class="meta">${esc(p.ket||'')}</p></div>`).join(''):`<div class="card"><h3>Jadwal akan diperbarui oleh petugas puskesmas</h3><p>[Masukkan jadwal posyandu yang telah diverifikasi]</p></div>`;
+const f=new Date(cy,cmn,1),n=new Date(cy,cmn+1,0).getDate();$('#cm').textContent=f.toLocaleDateString('id-ID',{month:'long',year:'numeric'});
+let h=['Min','Sen','Sel','Rab','Kam','Jum','Sab'].map(d=>`<b>${d}</b>`).join('')+'<span></span>'.repeat(f.getDay());
+for(let d=1;d<=n;d++){const ds=`${cy}-${String(cmn+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;h+=`<button data-d="${ds}" class="${POSYANDU.some(p=>p.tanggal===ds)?'has':''}">${d}</button>`}
+$('#cal').innerHTML=h};
+['#fq','#fk','#fb','#ft','#fj'].forEach(s=>$(s).addEventListener('input',draw));
+$('#pm').onclick=()=>{cmn--;if(cmn<0){cmn=11;cy--}draw()};$('#nm').onclick=()=>{cmn++;if(cmn>11){cmn=0;cy++}draw()};
+$('#cal').onclick=e=>{if(e.target.dataset.d){$('#ft').value=e.target.dataset.d;draw()}};draw()}
+function initInfo(){let tab='Semua';
+const draw=()=>{const q=$('#iq').value.toLowerCase();let out='';
+if(['Semua','Artikel'].includes(tab)){const a=ARTIKEL.filter(x=>(x.j+x.b).toLowerCase().includes(q));out+=a.map((x,i)=>`<article class="card" style="margin-bottom:12px"><span class="ic">${x.i}</span><h3>${x.j}</h3><p class="meta">Kategori: ${x.k} · Tanggal publikasi: [Masukkan tanggal] · ${x.t} (perlu ditinjau petugas)</p><p>${x.b}</p><p class="meta">Referensi: ${x.s}</p></article>`).join('')}
+const ph={Pengumuman:'Pengumuman layanan akan diperbarui oleh petugas puskesmas.','Berita dan Kegiatan':'Berita dan kegiatan akan diperbarui oleh petugas puskesmas.','Standar Pelayanan':'[Masukkan jenis pelayanan, persyaratan, prosedur, jam pelayanan, dan biaya sesuai ketentuan resmi]',Dokumen:'Dokumen publik (profil, standar pelayanan, brosur, leaflet) akan tersedia setelah disetujui untuk dipublikasikan.'};
+Object.keys(ph).filter(k=>tab==='Semua'||tab===k).forEach(k=>{if(!q||ph[k].toLowerCase().includes(q)||k.toLowerCase().includes(q))out+=`<div class="card" style="margin-bottom:12px"><h3>${k}</h3><p>${ph[k]}</p></div>`});
+$('#ires').innerHTML=out||'<div class="card">Tidak ada hasil yang cocok.</div>'};
+$('#iq').oninput=draw;$('#tabs').onclick=e=>{if(e.target.dataset.t){tab=e.target.dataset.t;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b===e.target));draw()}};draw()}
+function initKontak(){$('#cf').onsubmit=e=>{e.preventDefault();const m=[];if(!$('#cn').value.trim())m.push('nama');if(!$('#cs').value.trim())m.push('subjek');if($('#cm').value.trim().length<10)m.push('isi pesan (minimal 10 karakter)');
+$('#cerr').textContent=m.length?'Mohon lengkapi: '+m.join(', ')+'.':'Formulir masih dalam tahap pengembangan, pesan Anda belum dikirim.'}}
+function initGal(){const g=$('#gal');if(g)g.onclick=e=>{const b=e.target.closest('[data-g]');if(b)alert(b.dataset.g+' – foto belum diunggah.')}}
+function route(){const r=(location.hash||'#beranda').slice(1);const f=pages[r];$('#app').innerHTML=f?f():nf();
+document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r));$('#nav').classList.remove('open');
+document.title=(f?r[0].toUpperCase()+r.slice(1):'404')+' – Puskesmas Tambak Aji';
+({posyandu:initPos,informasi:initInfo,kontak:initKontak,profil:initGal})[r]?.();window.scrollTo(0,0)}
+addEventListener('hashchange',route);route();
+$('#mb').onclick=()=>{const o=$('#nav').classList.toggle('open');$('#mb').setAttribute('aria-expanded',o)};
+addEventListener('scroll',()=>{$('#up').style.display=scrollY>400?'block':'none'});$('#up').onclick=()=>scrollTo({top:0});
+</script>
+</body>
+</html>
